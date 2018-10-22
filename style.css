@@ -1,0 +1,79 @@
+* {margin: 0; box-sizing: border-box; scroll-behavior: smooth; font-family: 'Montserrat', Verdana, sans-serif;}
+body {background-color: var(--brand-color-one); color: black; text-align: center;
+word-break: break-word;line-height: 1.4;}
+
+:root {
+  --brand-color-one: white;
+  --brand-color-two: whitesmoke;
+  --brand-color-three: black;
+  --brand-color-four: lightgray;
+  --brand-color-five: #7bb3ff;
+}
+
+#contentList {display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0px 50px; padding: 0;}
+
+.detailsWrapper {display: flex; justify-content: space-between; padding: 0px 10px;}
+@media screen and (max-width: 700px) {.detailsWrapper {flex-direction: column;}}
+
+#filterBox {display: flex; justify-content: center; align-items: center; flex-direction: row; margin-top: 100px;}
+@media screen and (max-width: 700px) {#filterBox {flex-direction: column;}}
+
+
+
+button {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+#load:hover {
+  background-color: var(--brand-color-three);
+  color: var(--brand-color-one);
+}
+
+/***********************
+*********NAVBAR*********
+************************/
+.navbar { display: flex; justify-content: space-between;
+align-items: center; padding: 0px; height: 80px; border-bottom: 5px solid lightgray; color: white;
+background-color: rgba(0,0,0,0.8);
+}
+.navbar a, div, p { padding: 10px; }
+@media screen and (max-width: 500px) { .navbar { flex-direction: column; height: 150px;} }
+
+.navbar > div > p {color: var(--brand-color-one); cursor: pointer; display: inline-block; font-size: 18px; transition: 0.5s ease;}
+.navbar > div > p:hover, p:active {color: var(--brand-color-five);}
+
+a:link, a:visited {text-decoration: none; transition: 0.5s ease;}
+a:link, a:visited {color: var(--brand-color-one);}
+a:hover, a:active {color: var(--brand-color-five);}
+
+/************************/
+/************************/
+/************************/
+
+/***********************
+*********FOOTER*********
+************************/
+.footer {
+  display: flex; justify-content: center; margin-top: 100px; padding: 10px 40px;
+  background-color: var(--brand-color-four); /*#96858f*/
+}
+.footer a, p {color: var(--brand-color-three); margin: 5px 20px; padding: 0px 0px; transition: 0.5s ease;}
+.footer a:hover { color: var(--brand-color-five); }
+
+@media screen and (max-width: 700px) {.footer {flex-direction: column;}}
+
+/************************/
+/************************/
+/************************/
+
+.modal {display: none; height: 100%; width: 100%; position: fixed;
+  z-index: 1; top: 0; left: 0; background-color: var(--brand-color-two);
+  overflow-y: hidden; animation-duration: 0.5s; animation-name: modalopen;
+}
+.closeBtn:hover, closeBtn:focus { cursor: pointer; }
+@keyframes modalopen { from{opacity: 0} to{opacity: 1} }
